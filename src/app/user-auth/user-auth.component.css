@@ -1,0 +1,18 @@
+.user-auth,.user-login{
+    text-align: center;
+}
+
+.user-auth-heading,.user-login{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    color: blueviolet;
+}
+
+.invalid-input{
+    color: red;
+    font-size: 12px;
+    margin-top: -20px;
+}
+button:disabled{
+    cursor: not-allowed;
+}

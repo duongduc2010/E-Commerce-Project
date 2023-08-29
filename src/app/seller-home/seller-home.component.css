@@ -1,0 +1,31 @@
+
+table{
+    text-align:left;
+    color: blueviolet;
+    border-collapse: collapse ;
+}
+table td, table th{
+    border: 1px solid blueviolet;
+    padding: 10px;
+    min-height: 160px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+    
+.delete-btn{
+    border: none;
+
+}
+
+.delete-icon{
+    color: blueviolet;
+    border: none;
+}
+
+.edit-icon-link{
+    margin-left: 10px;
+}

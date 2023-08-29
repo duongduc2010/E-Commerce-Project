@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+/* html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family : sans-serif;
+    
+} */
+body{
+    font-family : sans-serif;
+    
+}
+.containter{
+    margin:  0 5%;
+}
+.nav__heading a{
+    color: blueviolet;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: black;
+    border: 5px;
+}
+.common-form{
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 300px;
+}
+
+.common-form a{
+    color: blueviolet;
+    cursor: pointer;
+}
+.error-p{
+    color: red;
+}
+.form-input{
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid blueviolet;
+    color: blueviolet;
+}
+
+.form-button{
+    height: 35px;
+    border: 1px solid blueviolet;
+    cursor: pointer;
+}
+
+
+.max-width{
+    width: 100%;
+}
+.message-p{
+    text-align: center;
+    color: green;
+}

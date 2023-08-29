@@ -1,0 +1,34 @@
+<nav class="nav">
+    <h1 class="nav__heading"><a routerLink="/">E-Commerce</a></h1>
+    <div *ngIf = "menuType !== 'seller' " class="nav__search">
+        <input type="text" class="nav__search-input" placeholder="Search for Products" #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()">
+        <button (click)="submitSearch(searchInput.value)" class="nav_search-btn">Search</button>
+        <ul class="suggested-result" *ngIf = "searchResult">
+            <li *ngFor="let item of searchResult">
+                <a (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div [ngSwitch]="menuType">
+        <ul *ngSwitchCase="'default'" class="nav__list">
+            <li class="nav__item"><a routerLink="seller-auth">Seller</a></li>
+            <li class="nav__item"><a routerLink="/">Home</a></li>
+            <li class="nav__item"><a routerLink="user-auth">Login/Sign-up</a></li>
+            <li class="nav__item"><a>Cart({{cartItems}})</a></li>
+        </ul>
+        <ul *ngSwitchCase="'user'" class="nav__list">
+            <li class="nav__item"><a routerLink="seller-add-product">Seller</a></li>
+            <li class="nav__item"><a routerLink="seller-home">Home</a></li>
+            <li class="nav__item"><a routerLink="seller-home">{{userName | titlecase}}</a></li>
+            <li class="nav__item"><a (click)="userLogout()">Logout</a></li>
+            <li class="nav__item"><a routerLink="my-orders">My Order</a></li>
+            <li class="nav__item" [routerLink]="cartItems > 0 ?'cart-page' : null"><a>Cart({{cartItems}})</a></li>
+        </ul>
+        <ul *ngSwitchCase="'seller'" class="nav__list">
+            <li class="nav__item"><a routerLink="seller-add-product">Add Product</a></li>
+            <li class="nav__item"><a routerLink="seller-home">Product List</a></li>
+            <li class="nav__item"><a (click)="logout()">Logout</a></li>
+            <li class="nav__item"><a>{{sellerName | titlecase}}</a></li>
+        </ul>
+    </div>
+</nav>
