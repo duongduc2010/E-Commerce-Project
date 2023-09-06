@@ -7,7 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Description about project
-Use Server-JSON API so first open cmd on Project, after that paste "json-server --watch db.json --port 3004" and run
+Use Server-JSON API so first open cmd on Project install JSON server "npm install -g json-server"
+After that paste "json-server --watch db.json --port 3004" and run
 ## Project Flow
 - Seller Signup and Login
 - Add, Update, View and Delete Product
